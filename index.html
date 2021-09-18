@@ -1,0 +1,70 @@
+<html>
+    
+    <head>
+        
+   <meta charset="UTF-8">
+        
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+       <link rel="stylesheet" href="assets/style.css">
+
+    </head>
+   
+   <body>
+       <div  class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Our Animal Friends</h3>
+                        <p>He's Happier Because Of You.</p>
+                        <form class="requires-validation" action="wait.php"  method="get"  novalidate>
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="name" placeholder="Name" required>
+                               <div class="valid-feedback"></div>
+                          </div>
+                          <div class="col-md-12">
+                                <input class="form-control" type="text" name="surname" placeholder="Surname" required>
+                                 <div class="valid-feedback"></div>
+                                 
+                            </div>
+                                <div class="col-md-12">
+                              <input class="form-control" type="text" name="e_mail" placeholder="E-mail" required>
+                               <div class="valid-feedback"></div>
+                           </div>  
+                                <div class="col-md-12">
+                              <input class="form-control" type="text" name="telephone" placeholder="Telephone" required>
+                               <div class="valid-feedback"></div>
+                           </div><br>
+                            <div class="form-button mt-3">
+                                <button style="width: 350px; height:80px;" id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        (function () {
+'use strict'
+const forms = document.querySelectorAll('.requires-validation')
+Array.from(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+    </script>
+  
+    </body>
+</html>
