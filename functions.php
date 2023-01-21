@@ -42,7 +42,7 @@
  $uuid = uniqid();
  $url = imagepng($write_image, "data-images/".$uuid.".png");
  imagedestroy($write_image);
- $url =  "https://{$_SERVER['HTTP_HOST']}/php-image-project/data-images/".$uuid.".png";
+ $url =  "https://{$_SERVER['HTTP_HOST']}/data-images/".$uuid.".png";
  $txt = "$name,   $surname,       $e_mail,       $telephone";
  $txt = $txt."\n" ;
  file_put_contents("data.txt", $txt, FILE_APPEND);
